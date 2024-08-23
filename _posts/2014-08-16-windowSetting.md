@@ -45,7 +45,7 @@ gitHub 아이디가 있어야 하고 사용할 줄 알아야 한다<br>
 bundle exec jekyll serve
 ```
 
-해당 경로에 위 명령어를 실행하면 [localhost:4000](http://localhost:4000) 주소에 켜지는것을 알 수 있다
+해당 경로에 위 명령어를 실행하면 [localhost:4000](https://localhost:4000) 주소에 켜지는것을 알 수 있다
 
 ### <span style ="color: red;">주의할 점</span>
 

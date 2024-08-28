@@ -39,7 +39,7 @@ avatar: 이미지이름.확장자
 
 > 누르게 되면 검색창이 하나 뜰것인데 이때 #sidebar를 검색해주면
 
-```css
+```scss
 #sidebar {
   @include pl-pr(0);
 
@@ -77,7 +77,7 @@ avatar: 이미지이름.확장자
 
 > 아까처럼 commons.scss라는 파일에 들어가서
 
-```css
+```scss
 .site-title {
   font-family: inherit;
   font-weight: 900;
@@ -100,7 +100,7 @@ avatar: 이미지이름.확장자
 
 > 다음은 그 밑에 있는 글자의 색을 바꾸어 보자 위와 똑같은 파일에서 color의 색을 수정해주면 된다
 
-```css
+```scss
 .site-subtitle {
   font-size: 95%;
   color: ;
@@ -117,7 +117,7 @@ avatar: 이미지이름.확장자
 
 > 이 색깔도 수정할 수 있다 이 친구 또한 같은 파일에서 수정하면 된다
 
-```css
+```scss
 %sidebar-link-hover {
   &:hover {
     color: white;
@@ -127,7 +127,7 @@ avatar: 이미지이름.확장자
 
 > 마지막으로 밑에 글씨의 메뉴의 글씨를 수정해보자 이 친구는 다른 친구와는 다르게 module.css에서 수정을 해야한다
 
-```css
+```scss
 %sidebar-links {
   color: white;
   -webkit-user-select: none;

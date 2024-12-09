@@ -39,15 +39,15 @@ permalink: /posts/last-story/
 
 ### ERD
 
-![image.png](/assets/img/theend/image.png)
+![image.png](/assets/img/1206/image.png)
 
 ### 아키텍쳐
 
-![image.png](/assets/img/theend/image2.png)
+![image.png](/assets/img/1206/image2.png)
 
 > CI / CD
 
-![image.png](/assets/img/theend/image3.png)
+![image.png](/assets/img/1206/image3.png)
 
 ### 내가 맡은 기능
 

@@ -1,19 +1,4 @@
-@import 'colors/typography-light';
-@import 'colors/typography-dark';
-@import 'addon/variables';
-@import 'variables-hook';
-@import 'addon/module';
-@import 'addon/syntax';
-@import 'addon/commons';
-@import 'layout/home';
-@import 'layout/post';
-@import 'layout/tags';
-@import 'layout/archives';
-@import 'layout/categories';
-@import 'layout/category-tag';
-@font-face {
-    font-family: '야놀자 야체 Regular';
-    src: url('[폰트 경로]') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+@forward 'base';
+@forward 'components';
+@forward 'layout';
+@forward 'pages';

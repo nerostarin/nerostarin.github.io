@@ -31,18 +31,18 @@ permalink: /posts/elice/last/
 
 ### UI 프로토 타입
 
-![image.png](/assets/img/25-0310/image2.png)
+![image.png](/assets/img/2025/0310/image2.png)
 
 ### 사용 기술
 
-![image.png](/assets/img/25-0310/image4.png)
+![image.png](/assets/img/2025/0310/image4.png)
 **React Query를 사용한 이유는 서버 데이터**를 효율적으로 관리하고 **캐싱**을 통해 **반복 API 요청**을 줄일 수 있습니다. 원래는 **낙관적 업데이트**와 **Abort Controller** 를 활용하려 했으나 사용하지 못했고, 그 대신 안정적인 **성공 및 에러 처리**를 통해 **훅 레이어에서 비즈니스 훅과 스토어 간 데이터 동기화**를 구현할 수 있었음.
 
 **그다음으로 Zustand를 사용한 이유는** 비즈니스 로직을 담은 훅에서 관리되던 **상태를 전역 상태로 변환**해 여러 **컴포넌트에 데이터를 공급**할 수 있기 때문입니다.
 
 **vite-plugin-pages-router 직접 제작해서 사용한 이유는** 프로젝트 아키텍처를 고민한 결과, 페이지 레이어에서 로직을 최대한 분리하고 **UI와 비즈니스 로직**을 명확히 **구분**할 필요가 있다고 판단함. Next.js의 페이지 라우팅 방식을 참고하여, **Vite 환경**에서도 유사한 **페이지 라우팅** 구조를 적용함으로써 **로직과 UI를** 깔끔하게 분리하고자 직접 제작함.
 
-![image.png](/assets/img/25-0310/image5.png)
+![image.png](/assets/img/2025/0310/image5.png)
 **OpenAI, MySQL는 사실 러닝커브를 줄이기 위해 사용한게 가장 큰 이유였습니다. 다른 프로젝트에서 OpenAI 를 사용했던 팀원도 있었고 모든 팀원이 MySQL을 사용해 본 경험이 있었기에 채택하게 되었습니다.**
 
 **Docker를 사용한 이유는 개발 및 테스트 그리고 배포 환경을 일관되게 유지하고 CI/CD 파이프라인과의 통합을 원활하게 하기 위해서 사용했습니다.**
@@ -51,30 +51,30 @@ permalink: /posts/elice/last/
 
 ### 프로젝트 구조(시스템 아키텍쳐)
 
-![image.png](/assets/img/25-0310/image3.png)
+![image.png](/assets/img/2025/0310/image3.png)
 
 ### 프로젝트 구조(시퀀스 다이어 그램)
 
-![image.png](/assets/img/25-0310/image6.png)
-![image.png](/assets/img/25-0310/image7.png)
+![image.png](/assets/img/2025/0310/image6.png)
+![image.png](/assets/img/2025/0310/image7.png)
 
 ### ERD
 
-![image.png](/assets/img/25-0310/image.png)
+![image.png](/assets/img/2025/0310/image.png)
 
 ### 트러블 슈팅
 
 ### 문제의 상황
 
 프로젝트를 생성을 할 때에 사용자를 프로젝트에 초대하는 Email을 발송하는데 발송 시간이 오래 걸리는 안타까운 상황이 발생을 하였다.
-![image.png](/assets/img/25-0310/image8.png)
+![image.png](/assets/img/2025/0310/image8.png)
 
 ### **원인 분석**
 
 프로젝트 생성시에 프로젝트 데이터를 테이블에 저장한 뒤, 각 이메일을 한개씩 순차적으로 처리하도록 구현되어 있음.
 
 이러한 순차적 전송 방식으로 인하여 프로젝트 생성 응답 시간이 평균 7초 후반으로 측정 됨.
-![image.png](/assets/img/25-0310/image9.png)
+![image.png](/assets/img/2025/0310/image9.png)
 
 ### 해결방법
 
@@ -83,7 +83,7 @@ permalink: /posts/elice/last/
 이후 병렬화를 추가적으로 도입하여 여러 이메일 전송 작업을 병렬로 처리함.
 
 결과적으로 프로젝트 생성시 걸리는 시간을 0.14초로 줄이는데에 성공함.
-![image.png](/assets/img/25-0310/image10.png)
+![image.png](/assets/img/2025/0310/image10.png)
 
 ### 피드백
 
